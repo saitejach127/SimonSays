@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor : 'white'}}>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{backgroundColor : 'white'}}>
         <div className="container">
           <a className="navbar-brand" href="/">
             Simons
@@ -23,13 +23,13 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
               </ul>
-            <a className="nav-link " href="/" style={{color : "black"}}>
+            <a className="nav-link " href="/" style={{color : "white"}}>
               Home
             </a>
-            <a className="nav-link " href="/simonsays/task" style={{color : "black"}}>
+            <a className="nav-link " href="/simonsays/task" style={{color : "white"}}>
               Simon Says
             </a>
-            <a className="nav-link " href="/" style={{color : "black"}}>
+            <a className="nav-link " href="/" style={{color : "white"}}>
               Game
             </a>
           </div>

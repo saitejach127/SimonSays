@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
+import Navbar from '../Navbar';
 
 export default function Task() {
 
@@ -20,6 +21,7 @@ export default function Task() {
 
     return (
         <div>
+            <Navbar />
             <h1>{task}</h1>
             <iframe title="example" width="560" height="315" src={`https://www.youtube.com/embed/${vidid}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
             <Link to="/simonsays/score" className="btn btn-success">Do it</Link>

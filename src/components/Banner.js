@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from './media/banner-bg.png'
+import banner from './media/bg-children.jpg'
 
 export default function Banner() {
     return (
@@ -7,7 +7,7 @@ export default function Banner() {
             <div className="container">
                 <div className="row">
                 
-                    <div className="col-lg-8 col-md-12"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1>Games for Overall Development Of Kids</h1></div>
+                    <div className="col-lg-8 col-md-12"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1 style={{color : 'white'}}>Games for Overall Development Of Kids</h1></div>
                     <div className="col-lg-4 col-md-12"></div>
                 </div>
             </div>
