@@ -27,6 +27,7 @@ export default function Main() {
       <Navbar />
       <div className="container">
         <center>
+            <br />
           <h1>Simon Says</h1>
           <h3>About the Game</h3>
           <p>
@@ -50,7 +51,6 @@ export default function Main() {
             Play the Game
           </button>
         </center>
-        <br />
         <br />
         <br />
         <br />

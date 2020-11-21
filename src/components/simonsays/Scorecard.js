@@ -20,7 +20,7 @@ export default function Main() {
             }
             console.log(allRows);
             allRows.sort((a,b) => {
-                return a.score > b.score;
+                return b.score - a.score;
             })
             setRows(allRows);
         })

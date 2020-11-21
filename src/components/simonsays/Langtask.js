@@ -66,7 +66,7 @@ export default function Langtask() {
       <Navbar />
       <br />
       <center>
-        <h1>Simon says spell the word {word}</h1>
+        <h1>Simon says spell the word</h1>
       </center>
       <div className="row">
         <div className="col-lg-6">
