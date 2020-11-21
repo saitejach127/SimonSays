@@ -12,7 +12,8 @@ export default function Section2() {
             </div>
             <div className="col-lg-6" style={{backgroundColor : '#add8e6'}}>
             <center>
-                    <h1>Cognitive Development</h1>
+                    <h1>Memory Development</h1>
+                    <p>Scientifically it is proven that watching mobile or any electronic device decreases your memory power. Since children are exposed to mobiles from small age they will be most effected by this</p>
             </center>
             </div>
         </div>

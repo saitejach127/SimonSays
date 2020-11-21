@@ -1,27 +1,30 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-
-
-function createData(name, score) {
-    return { name, score };
-  }
-
+import {database} from '../Config';
 
 export default function Main() {
 
-    var rows = [
-        createData("Siddhant", 25),
-        createData("Sai Teja", 122),
-        createData("Anshika", 30),
-    ]
+    const [rows, setRows] = useState([]);
+    const [name, setName] = useState("");
 
-    var name = "Siddhant"
-
-    rows.sort(function (a,b)
-    {
-        return b.score - a.score
-    })
+    useEffect(() => {
+        if(localStorage.getItem("name")){
+            setName(localStorage.getItem("name"));
+        }
+        var allRows = [];
+        database.ref("scores/").once("value").then((snap) => {
+            var data = snap.val();
+            for(var key of Object.keys(data)){
+                allRows.push(data[key]);
+            }
+            console.log(allRows);
+            allRows.sort((a,b) => {
+                return b.score - a.score;
+            })
+            setRows(allRows);
+        })
+    }, [])
 
     return (
         <>
@@ -34,7 +37,7 @@ export default function Main() {
             <div><br></br></div>
             <div className="container">
                 <center>
-                <table class="table table-hover">
+                <table className="table table-hover">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -44,7 +47,7 @@ export default function Main() {
                 </thead>
                 <tbody>
                     {rows.map((row,index) => (
-                    <tr class={row.name === name?"table-primary":""}>
+                    <tr className={row.name === name?"table-primary":""} key={index}>
                     <th scope="row">{index+1}</th>
                     <td>{row.name}</td>
                     <td>{row.score}</td>
