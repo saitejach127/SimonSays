@@ -9,7 +9,7 @@ export default function Main() {
             var name = prompt("Enter your Name");
         localStorage.setItem("name", name);
         }
-        window.location.href = "/simonsays/task";
+        window.location.href = "/simonsays/common";
     }
 
     return (

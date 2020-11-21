@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import banner from './media/bg-children.jpg'
 
 export default function Banner() {
@@ -7,7 +8,7 @@ export default function Banner() {
             <div className="container">
                 <div className="row">
                 
-                    <div className="col-lg-8 col-md-12"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1 style={{color : 'white'}}>Games for Overall Development Of Kids</h1></div>
+                    <div className="col-lg-8 col-md-12"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1 style={{color : 'white'}}>Game for Overall Development Of Kids</h1><Link className="btn btn-success" to="/simonsays">Play the Game</Link></div>
                     <div className="col-lg-4 col-md-12"></div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Simon from './components/simonsays/Main'
 import Task from './components/simonsays/Task';
 import Score from './components/simonsays/Score';
+import Common from './components/simonsays/Common';
 import './bootstrap.min.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/simonsays" component={Simon} />
+        <Route exact path="/simonsays/common" component={Common} />
         <Route exact path="/simonsays/task" component={Task} />
         <Route exact path="/simonsays/score" component={Score} />
       </Router>
