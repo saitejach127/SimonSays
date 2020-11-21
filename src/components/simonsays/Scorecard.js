@@ -12,7 +12,7 @@ export default function Main() {
 
     var rows = [
         createData("Siddhant", 25),
-        createData("Sai Teja", 122),
+        createData("Sai Teja", 22),
         createData("Anshika", 30),
     ]
 
@@ -55,6 +55,12 @@ export default function Main() {
                 </table>
                 </center>
             </div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
             <div><br></br></div>
             <div><br></br></div>
             <Footer />
