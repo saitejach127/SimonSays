@@ -14,6 +14,8 @@ export default function Task() {
         const idx = Math.floor(Math.random() * 6);
         setTask(allTasks[idx]);
         setVidid(videourl[idx]);
+        var msg = new window.SpeechSynthesisUtterance(`Simon says do a ${allTasks[idx]}`);
+        window.speechSynthesis.speak(msg);
     }
 
     useEffect(() => {
@@ -31,7 +33,7 @@ export default function Task() {
                     <center><p>Watch the video and click on Do it button to perform the Task</p></center>
                 </div>
                 <div className="col-lg-6">
-                <iframe title="example" width="560" height="315" src={`https://www.youtube.com/embed/${vidid}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title="example" width="560" height="315" src={`https://www.youtube.com/embed/${vidid}`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
             </div>
