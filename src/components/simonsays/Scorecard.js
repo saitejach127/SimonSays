@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
@@ -45,7 +44,7 @@ export default function Main() {
                 </thead>
                 <tbody>
                     {rows.map((row,index) => (
-                    <tr class={row.name == name?"table-primary":""}>
+                    <tr class={row.name === name?"table-primary":""}>
                     <th scope="row">{index+1}</th>
                     <td>{row.name}</td>
                     <td>{row.score}</td>

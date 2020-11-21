@@ -29,6 +29,9 @@ export default function Navbar() {
             <a className="nav-link " href="/simonsays/" style={{color : "white"}}>
               Simon Says
             </a>
+            <a className="nav-link " href="/simonsays/leaderboard" style={{color : "white"}}>
+              Leaderboard
+            </a>
           </div>
         </div>
       </nav>
