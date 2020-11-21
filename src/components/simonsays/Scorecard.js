@@ -12,7 +12,7 @@ export default function Main() {
 
     var rows = [
         createData("Siddhant", 25),
-        createData("Sai Teja", 22),
+        createData("Sai Teja", 122),
         createData("Anshika", 30),
     ]
 
