@@ -57,6 +57,12 @@ export default function Main() {
             </div>
             <div><br></br></div>
             <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
+            <div><br></br></div>
             <Footer />
         </>
     )
