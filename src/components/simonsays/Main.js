@@ -5,8 +5,10 @@ import Footer from '../Footer';
 export default function Main() {
 
     const storeName = () => {
-        var name = prompt("Enter your Name");
+        if(localStorage.getItem("name") === null){
+            var name = prompt("Enter your Name");
         localStorage.setItem("name", name);
+        }
         window.location.href = "/simonsays/task";
     }
 
