@@ -26,7 +26,7 @@ export default function Navbar() {
             <a className="nav-link " href="/" style={{color : "white"}}>
               Home
             </a>
-            <a className="nav-link " href="/simonsays/task" style={{color : "white"}}>
+            <a className="nav-link " href="/simonsays/" style={{color : "white"}}>
               Simon Says
             </a>
             <a className="nav-link " href="/" style={{color : "white"}}>
