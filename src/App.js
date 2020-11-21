@@ -5,6 +5,7 @@ import Simon from './components/simonsays/Main'
 import Task from './components/simonsays/Task';
 import Score from './components/simonsays/Score';
 import Common from './components/simonsays/Common';
+import Scorecard from './components/simonsays/Scorecard';
 import './bootstrap.min.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/simonsays/common" component={Common} />
         <Route exact path="/simonsays/task" component={Task} />
         <Route exact path="/simonsays/score" component={Score} />
+        <Route exact path="/simonsays/leaderboard" component={Scorecard} />
       </Router>
     </React.Fragment>
   );
