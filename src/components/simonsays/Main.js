@@ -1,9 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
 export default function Main() {
+
+    const storeName = () => {
+        var name = prompt("Enter your Name");
+        localStorage.setItem("name", name);
+        window.location.href = "/simonsays/task";
+    }
+
     return (
         <>
             <Navbar />
@@ -11,7 +17,7 @@ export default function Main() {
                 <center><h1>Simon Says</h1>
                     <h3>About the Game</h3>
                     <p>Simon Says is a game where in children are given a random task and children perform the task</p>
-                    <h3>How to play</h3>
+                    <h3>How to play!!</h3>
                     </center>
                     <ul>
                         <li>Children are shown by a random task</li>
@@ -21,8 +27,8 @@ export default function Main() {
                         <li>Based on the performance children will be assigned score</li>
                         <li>Children can view all the scores of there friends on the Leaderboard</li>
                     </ul>
-                    <center><Link to="/simonsays/task" className="btn btn-success">Play the Game</Link></center>
-                    <br /><br /><br /><br /><br /><br /><br />
+                    <center><button className="btn btn-success" onClick={storeName}>Play the Game</button></center>
+                    <br /><br /><br /><br /><br /><br /><br />  
             </div>
             <Footer />
         </>
