@@ -16,7 +16,6 @@ export default function Common() {
                     </div>
                     <div class="col-sm">
                         <center><Link to="/simonsays/task" className="btn btn-success">Memory Development</Link></center><br /><br />
-                        <center><Link to="/simonsays/task" className="btn btn-success">General Knowledge Development</Link></center><br />
                     </div>
                 </div></center> 
             </div>
