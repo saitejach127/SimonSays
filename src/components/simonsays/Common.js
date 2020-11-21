@@ -10,9 +10,9 @@ export default function Common() {
             <div className="container"><br />
                 <center><h1>Which skill do you want to develop ?</h1></center><br /><br />
                 <Link to="/simonsays/task" className="btn btn-primary">Physical Development</Link><br /><br />
-                <Link to="/simonsays/task" className="btn btn-primary">Language Development</Link><br /><br />
+                <Link to="/simonsays/langtask" className="btn btn-primary">Language Development</Link><br /><br />
                 <Link to="/simonsays/task" className="btn btn-primary">Memory Development</Link><br /><br />
-                <Link to="/simonsays/task" className="btn btn-primary">Physical Development</Link><br />
+                <Link to="/simonsays/task" className="btn btn-primary">General Knowledge Development</Link><br />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br />
             <Footer />
