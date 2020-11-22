@@ -10,11 +10,11 @@ export default function Common() {
             <div className="container"><br />
                 <center><h1>Which skill do you want to develop ?</h1></center><br /><br />
                 <center><div class="row">
-                    <div class="col-sm">
+                    <div className="col-sm">
                         <center><Link to="/simonsays/task" className="btn btn-success">Physical Development</Link></center><br /><br />
                         <center><Link to="/simonsays/langtask" className="btn btn-success">Language Development</Link></center><br /><br />
                     </div>
-                    <div class="col-sm">
+                    <div className="col-sm">
                         <center><Link to="/simonsays/task" className="btn btn-success">Memory Development</Link></center><br /><br />
                     </div>
                 </div></center> 

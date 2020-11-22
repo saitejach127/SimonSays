@@ -6,6 +6,10 @@ import { database } from "../Config";
 export default function Langtask() {
   const [word, setWord] = useState("");
   const [spelling, setSpelling] = useState("");
+  const [speek, setSpeek] = useState(false);
+  const [sent, setSent] = useState("");
+  const [resultSent, setResultSent] = useState("");
+  const [listening, setListening] = useState(false);
 
   const getTask = () => {
     var allTasks = [
@@ -19,11 +23,29 @@ export default function Langtask() {
       "Pochemuchka",
       "Gobbledegook",
     ];
-    var idx = Math.floor(Math.random() * allTasks.length);
-    setWord(allTasks[idx]);
-    var msg = new window.SpeechSynthesisUtterance(`Simon says Spell the word`);
-    window.speechSynthesis.speak(msg);
-    console.log("sun");
+    var allSentence = [
+      "I love my country",
+      "Wash your hands regularly",
+      "Do not forget to wear a mask",
+      "I will do my homework in time",
+      "I will eat only healthy food",
+      "I will do exercise regularly",
+      "Eating junk food is bad for health"
+    ]
+    var choice = Math.floor(Math.random() * 2);
+    if(choice === 0){
+      setSpeek(false);
+      var wordmsg = new window.SpeechSynthesisUtterance("Simon says spell the word");
+      window.speechSynthesis.speak(wordmsg);
+      var idx = Math.floor(Math.random() * allTasks.length);
+      setWord(allTasks[idx]);
+    } else {
+      setSpeek(true);
+      var speekwordmsg = new window.SpeechSynthesisUtterance("Simon says Read the sentence");
+      window.speechSynthesis.speak(speekwordmsg);
+      var index = Math.floor(Math.random() * allSentence.length);
+      setSent(allSentence[index]);
+    }
   };
 
   const spellWord = () => {
@@ -57,6 +79,29 @@ export default function Langtask() {
     }
   };
 
+  const handleSpeech = () => {
+    var speechRecognition =  window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recog = new speechRecognition();
+    
+    recog.onstart = () => {
+      setListening(true);
+    }
+
+    recog.onresult = (e) => {
+      setListening(false);
+      const curr = e.resultIndex;
+      const trans = e.results[curr][0].transcript;
+      setResultSent(trans);
+      if(trans.toUpperCase() === sent.toUpperCase()){
+        alert("Congrats You earned 10 points");
+      } else {
+        alert("wrong answer try again");
+      }
+    }
+    recog.start();
+    
+  }
+
   useEffect(() => {
     getTask();
   }, []);
@@ -66,7 +111,8 @@ export default function Langtask() {
       <Navbar />
       <br />
       <center>
-        <h1>Simon says spell the word</h1>
+        {!speek && <h1>Simon says spell the word</h1>}
+        {speek && <h1>Simon says Read the Sentence</h1>}
       </center>
       <div className="row">
         <div className="col-lg-6">
@@ -77,10 +123,14 @@ export default function Langtask() {
           <br />
           <br />
           <center>
-            <p>
+            {!speek && <p>
               Click on Listen button and listen to the word. Then enter the
               spelling of it in the text box below and click submit
-            </p>
+            </p>}
+            {speek && <p>
+              Click on the speak button and read out the sentence shown below. < br/>
+              <p>{sent}</p>
+            </p>}
           </center>
         </div>
         <div className="col-lg-6">
@@ -91,7 +141,7 @@ export default function Langtask() {
           <br />
           <br />
           <center>
-            <button className="btn btn-primary" onClick={spellWord}>
+            {!speek && <div><button className="btn btn-primary" onClick={spellWord}>
               Listen
             </button>
             <br />
@@ -107,7 +157,14 @@ export default function Langtask() {
             <br />
             <button className="btn btn-success" onClick={validateWord}>
               Submit
-            </button>
+            </button></div>}
+            {speek && <div>
+              <button className="btn btn-primary" onClick={handleSpeech}>Speak</button>
+              <br />
+              <br />
+              {listening && <p>Listening....</p>}
+            {resultSent && <p>Your sentence : {resultSent}</p>}
+              </div>}
           </center>
         </div>
       </div>
