@@ -8,12 +8,12 @@ export default function Common() {
         <>
             <Navbar />
             <div className="container"><br />
-                <center><h1>Which skill do you want to develop ?</h1></center><br /><br />
+                <center><h1>What do you want to do ?</h1></center><br /><br />
                 <center><div class="row">
-                    <div className="col-sm">
-                        <center><Link to="/simonsays/task" className="btn btn-success">Physical Development</Link></center><br /><br />
-                        <center><Link to="/simonsays/langtask" className="btn btn-success">Language Development</Link></center><br /><br />
-                        <center><Link to="/simonsays/memtask" className="btn btn-success">Memory Development</Link></center><br /><br />
+                    <div class="col-sm">
+                        <center><Link to="/simonsays/task" className="btn btn-success">Let's Excercise</Link></center><br /><br />
+                        <center><Link to="/simonsays/langtask" className="btn btn-success">Listen/Read it out</Link></center><br /><br />
+                        <center><Link to="/simonsays/memtask" className="btn btn-success">Train your Brain</Link></center><br /><br />
                     </div>
                 </div></center> 
             </div>

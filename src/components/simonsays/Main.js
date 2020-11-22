@@ -31,24 +31,26 @@ export default function Main() {
           <h1>Simon Says</h1>
           <h3>About the Game</h3>
           <p>
-            Simon Says is a game where in children are given a random task and
-            children perform the task
+            Simon Says is a game where you will be asked to perform a given task and
+            later scored on it. Let's see how far you can climb up on the Leaderboard. 
           </p>
-          <h3>How to play!!</h3>
+          <h3>Instructions :</h3>
         </center>
+        <div className="container">
+        <div className="container">
         <ul>
-          <li>Children are shown by a random task</li>
-          <li>Children should first watch the video on how to do it</li>
-          <li>Then they need to perform the task</li>
-          <li>Camera will be monitoring the task performed</li>
-          <li>Based on the performance children will be assigned score</li>
+          <li>A random task will be shown.</li>
+          <li>Perform the task and be quick.</li>
+          <li>You will be scored on you performance. Be sure to keep a check on the timer.</li>
           <li>
-            Children can view all the scores of there friends on the Leaderboard
+            Children can view all the scores of there friends on the Leaderboard.
           </li>
         </ul>
+        </div>
+        </div>
         <center>
           <button className="btn btn-success" onClick={storeName}>
-            Play the Game
+            Play
           </button>
         </center>
         <br />
