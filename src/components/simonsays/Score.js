@@ -18,7 +18,8 @@ export default function Score() {
         //
         setInterval(() => {
           detect(net);
-        }, 100);
+        }, 1000);
+        // detect(net);
       };
     
       const detect = async (net) => {
