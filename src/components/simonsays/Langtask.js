@@ -55,14 +55,14 @@ export default function Langtask() {
 
   const validateWord = () => {
     if (word.toUpperCase() === spelling.toUpperCase()) {
-      alert("Congrats You earned 10 points");
+      alert("Correct Answer!");
       var name = localStorage.getItem("name");
       database
         .ref(`scores/${name}`)
         .once("value")
         .then((snap) => {
           var data = snap.val();
-          console.log(data);
+          // console.log(data);
           database
             .ref(`scores/${name}`)
             .set({
@@ -74,7 +74,7 @@ export default function Langtask() {
             });
         });
     } else {
-      alert("wrong answer try again");
+      alert("Wrong Answer, Please Try again!");
     }
   };
 

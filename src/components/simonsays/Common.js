@@ -13,13 +13,11 @@ export default function Common() {
                     <div className="col-sm">
                         <center><Link to="/simonsays/task" className="btn btn-success">Physical Development</Link></center><br /><br />
                         <center><Link to="/simonsays/langtask" className="btn btn-success">Language Development</Link></center><br /><br />
-                    </div>
-                    <div className="col-sm">
-                        <center><Link to="/simonsays/task" className="btn btn-success">Memory Development</Link></center><br /><br />
+                        <center><Link to="/simonsays/memtask" className="btn btn-success">Memory Development</Link></center><br /><br />
                     </div>
                 </div></center> 
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br /> <br /> <br />
+            <br /><br /><br /><br /><br /><br /><br /><br />
             <Footer />
         </>
     )
