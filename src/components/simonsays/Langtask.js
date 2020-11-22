@@ -9,6 +9,7 @@ export default function Langtask() {
   const [speek, setSpeek] = useState(false);
   const [sent, setSent] = useState("");
   const [resultSent, setResultSent] = useState("");
+  const [listening, setListening] = useState(false);
 
   const getTask = () => {
     var allTasks = [
@@ -82,14 +83,15 @@ export default function Langtask() {
     var speechRecognition =  window.SpeechRecognition || window.webkitSpeechRecognition;
     const recog = new speechRecognition();
 
+    recog.onstart = () => {
+      setListening(true);
+    }
+
     recog.onresult = (e) => {
       const curr = e.resultIndex;
       const trans = e.results[curr][0].transcript;
       setResultSent(trans);
-    }
-
-    recog.onspeechend = () => {
-      if(sent.toUpperCase() === resultSent.toUpperCase()){
+      if(sent.toUpperCase() === trans.toUpperCase()){
         alert("Congrats You earned 10 points");
       } else {
         alert("wrong answer try again");
@@ -160,6 +162,7 @@ export default function Langtask() {
               <button className="btn btn-primary" onClick={handleSpeech}>Speak</button>
               <br />
               <br />
+              {listening && <p>Listening... </p>}
             {resultSent && <p>Your sentence : {resultSent}</p>}
               </div>}
           </center>

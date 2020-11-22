@@ -8,11 +8,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-<<<<<<< HEAD
-    "babel-cli": "^6.26.0",
-=======
     "classnames": "^2.2.6",
->>>>>>> 4fb5799c3b4f68723162d183c538fb6acb5ac723
     "firebase": "^8.1.1",
     "global": "^4.4.0",
     "node-sass": "^5.0.0",
