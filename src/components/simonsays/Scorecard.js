@@ -18,7 +18,7 @@ export default function Main() {
             for(var key of Object.keys(data)){
                 allRows.push(data[key]);
             }
-            console.log(allRows);
+            // console.log(allRows);
             allRows.sort((a,b) => {
                 return b.score - a.score;
             })
@@ -58,7 +58,6 @@ export default function Main() {
                 </table>
                 </center>
             </div>
-            <div><br></br></div>
             <div><br></br></div>
             <div><br></br></div>
             <div><br></br></div>
