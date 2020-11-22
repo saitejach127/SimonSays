@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { database } from "../Config";
-import Playground from "../Playground";
 
 
 export default function Memorytask() {
@@ -24,7 +23,7 @@ export default function Memorytask() {
           </center>
           <br />
           <br />
-          <Playground />
+          {/* <Game /> */}
           <br />
           <br />
           <br />

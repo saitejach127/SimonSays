@@ -21,7 +21,7 @@ export default function Langtask() {
     ];
     var idx = Math.floor(Math.random() * allTasks.length);
     setWord(allTasks[idx]);
-    var msg = new window.SpeechSynthesisUtterance(`Simon says Spell the word`);
+    var msg = new window.SpeechSynthesisUtterance(`Simon says spell the word`);
     window.speechSynthesis.speak(msg);
     console.log("sun");
   };
