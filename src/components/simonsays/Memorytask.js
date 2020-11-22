@@ -16,8 +16,17 @@ export default function Memorytask() {
     //   };
     return (
         <>
-        <Navbar />
-          <App />
+          <Navbar />
+          <br />
+          <center>
+            <h1>Simon says play the tile game!</h1>
+          </center>
+          <br />
+          <br />
+            <App />
+          <br />
+          <br />
+          <br />
           <Footer />
         </>
       );
