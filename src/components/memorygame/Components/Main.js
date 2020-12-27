@@ -1,7 +1,6 @@
 import React from "react";
 import Login from "./Login";
 import Game from "./Game";
-import Navbar from "./Navbar";
 import EndGame from "./EndGame";
 import { database } from "../../Config"
 
@@ -25,6 +24,7 @@ class Main extends React.Component {
     // }
     if(boolean) {
       
+      alert("Well done that was fast!");
       var name = localStorage.getItem("name");
       database
         .ref(`scores/${name}`)
@@ -39,7 +39,6 @@ class Main extends React.Component {
               score: data.score + 10,
             })
             .then(() => {
-              alert("Well done that was fast!");
               window.location.href = "/simonsays/common";
             });
         });
@@ -49,7 +48,7 @@ class Main extends React.Component {
     }
   };
   render() {
-    const { showLogin, name, score, showEndGame } = this.state;
+    const { showLogin, showEndGame } = this.state;
     return (
       <div>
         {showLogin ? <Login name={this.handleLogin} /> : null}
